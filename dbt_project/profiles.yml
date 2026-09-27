@@ -1,0 +1,14 @@
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: QWXXWYG-VN45087
+      user: KAOUTARA7
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: ACCOUNTADMIN
+      database: TAXI_DB
+      warehouse: COMPUTE_WH
+      schema: ANALYTICS
+      threads: 4
+      client_session_keep_alive: False

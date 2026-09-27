@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw
+    database: TAXI_DB
+    schema: RAW
+    tables:
+      - name: taxi_trips
+
+models:
+  - name: stg_taxi_trips
+    columns:
+      - name: vendor_id
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null

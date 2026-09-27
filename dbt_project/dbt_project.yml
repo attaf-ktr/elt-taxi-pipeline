@@ -1,0 +1,23 @@
+name: 'dbt_project'
+version: '1.0.0'
+config-version: 2
+
+# Ce nom doit correspondre à la clé principale dans ton profiles.yml
+profile: 'dbt_project'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dbt_project:
+    # Par défaut, on matérialise les modèles sous forme de tables dans Snowflake
+    +materialized: table

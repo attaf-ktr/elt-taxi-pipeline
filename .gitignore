@@ -1,0 +1,4 @@
+.envlogs/
+.venv/
+data/
+logs/
