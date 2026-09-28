@@ -1,0 +1,21 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "stg_taxi_trips_suite",
+  "expectations": [],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "batch_request": {
+          "data_asset_name": "default_data_asset_name",
+          "data_connector_name": "default_inferred_data_connector_name",
+          "datasource_name": "snowflake_taxi_db",
+          "limit": 1000
+        },
+        "citation_date": "2026-09-27T21:49:44.981302Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.18.22"
+  }
+}

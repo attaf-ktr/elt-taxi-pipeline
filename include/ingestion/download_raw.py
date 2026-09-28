@@ -9,7 +9,7 @@ def get_snowflake_conn():
     return snowflake.connector.connect(
         account="QWXXWYG-VN45087",
         user="KAOUTARA7",
-        password="LrZyP2M;6,)zvTm", 
+        password = os.getenv("SNOWFLAKE_PASSWORD"), 
         warehouse="COMPUTE_WH",
         database="TAXI_DB",
         schema="RAW",

@@ -61,3 +61,4 @@ Ce projet a été architecturé pour démontrer la logique ELT et la résolution
     Isolation des ressources de calcul : Remplacement du BashOperator par le KubernetesPodOperator ou DockerOperator afin d'isoler l'exécution dbt et garantir la stabilité du serveur maître Airflow.
 
     Gestion des Secrets : Remplacement du fichier .env local par un gestionnaire de secrets type HashiCorp Vault ou AWS Secrets Manager.
+    
