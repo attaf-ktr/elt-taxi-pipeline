@@ -61,4 +61,14 @@ Ce projet a été architecturé pour démontrer la logique ELT et la résolution
     Isolation des ressources de calcul : Remplacement du BashOperator par le KubernetesPodOperator ou DockerOperator afin d'isoler l'exécution dbt et garantir la stabilité du serveur maître Airflow.
 
     Gestion des Secrets : Remplacement du fichier .env local par un gestionnaire de secrets type HashiCorp Vault ou AWS Secrets Manager.
-    
+
+
+## 🛡️ Data Quality & CI/CD
+
+[![Data Quality Validation (Great Expectations)](https://github.com/attaf-ktr/elt-taxi-pipeline/actions/workflows/data_quality.yml/badge.svg)](https://github.com/attaf-ktr/elt-taxi-pipeline/actions/workflows/data_quality.yml)
+Ce projet garantit la fiabilité des données grâce à **Great Expectations** et une intégration continue via **GitHub Actions**.
+
+À chaque modification du code sur la branche principale, un workflow automatisé se déclenche pour :
+1. Initialiser un environnement de test isolé.
+2. Établir une connexion sécurisée à l'entrepôt **Snowflake**.
+3. Exécuter le contrat de données (`stg_taxi_trips_checkpoint`) afin de valider les règles métier et bloquer toute régression avant le passage en production.
