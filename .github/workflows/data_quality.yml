@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install great_expectations "snowflake-connector-python[pandas]" sqlalchemy-snowflake
+          pip install great_expectations==0.18.22 "snowflake-connector-python[pandas]" snowflake-sqlalchemy
 
       - name: Run Great Expectations Checkpoint
         env:
